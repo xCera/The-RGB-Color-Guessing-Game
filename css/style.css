@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+body{
+    background-color: rgb(14, 14, 14);
+    color:white;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+
+.container{
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+.navbar h1{
+    font-size: 100px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+
+#header{
+    background-color: rgb(145, 38, 38);
+    height: 250px;
+}
+
+.strip {
+    width: 100%;
+    background-color: white;
+    height: 35px;
+
+}
+
+.stripContainer{
+    height: 100%;
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stripContainer button{
+    margin: 0 8px;
+    color:rgb(12, 12, 12);
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    height: 100%;
+    padding: 0 10px;
+    text-align: center;
+    text-transform: uppercase !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.stripContainer button:hover{
+    background-color: rgb(145, 38, 38) !important;
+    color:white;
+}
+
+.selected{
+    background-color: rgb(145, 38, 38) !important;
+    color:white !important;
+}
+
+.stripContainer div{
+    height: 100%;
+}
+
+
+
+.squares{
+    margin: 20px auto;
+    width: 50%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.square{
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(49, 138, 71) ;
+    border-radius: 50px;
+}
+
+.dissovle {
+    animation-name: dissovleEffect;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes dissovleEffect{
+    0%{ opacity: 100;}
+    100%{opacity: 0;}
+}
+
+
+
+@media screen and (max-width: 1024px) {
+   .navbar h1{
+       font-size: 50px;
+   }
+
+   .squares{
+    width:100%;
+}
+
+.row{
+      flex-direction: row;
+      width:100%;
+}
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar h1{
+        font-size: 30px;
+    }
+
+    .stripContainer{
+        width: 100%;
+    }
+
+    .square{
+        margin: 20px;
+        height: 50px;
+        width: 80px;
+        border-radius: 50px;
+    }
+
+    .squares{
+        width:100%;
+    }
+
+    .row{
+          flex-direction: row;
+          width:100%;
+    }
+  }
+   
+  
